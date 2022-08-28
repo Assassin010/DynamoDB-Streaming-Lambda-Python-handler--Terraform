@@ -1,5 +1,21 @@
+#DynamoDB Streaming Using Lambda (Python handler) via Terraform
 
-You find more details or my medium page as well: https://bit.ly/3QV6sXi
+
+Prerequisites : Code editor (Vscode, Atom, etc), Setup Terraform on your local machine, Setup Terraform in Visual Studio Code, Having an AWS account and an AWS IAM user with the appropriate permissions to perform the necessary actions, Install AWS CLI based on your operating system.
+
+Clone the code to your code editor with git clone command git clone https://github.com/Assassin010/DynamoDB-Streaming-Lambda-Python-handler--Terraform
+
+Deployment Steps: In your terminal Run these commands below (-)
+
+-Terraform init
+
+Initialize a working directory containing Terraform configuration files. This is the first command that should be run after writing a new Terraform configuration or cloning an existing one from version control. It is safe to run this command multiple times.
+
+-Terraform plan
+
+The terraform plan command lets you to preview the actions Terraform would take to modify your infrastructure, or save a speculative plan which you can apply later.
+
+-Terraform apply-auto-approve To deploy the infra
 
 If you have created the DynamoDB table with any other name, make the changes in code, on line number 6.
 same for s3 bucket on line number 23
@@ -27,8 +43,10 @@ Repeat the procedure of updating and adding new items to the table to see the ch
 
 
 *Streaming cloudwatch logs
-Navigate to Cloudwatch by clicking on  Management & Governance under the .
+Navigate to Cloudwatch.
 
 Click on the Log groups under Logs in the Left Panel.
 
-You should be able to see dynamodb logs under log groups. If it’s not visible, please wait for 5-10 minutes, CloudWatch usually takes around 5-10 minutes after the creation to fetch the details. check the result and more details here: 
+You should be able to see dynamodb logs under log groups. If it’s not visible, please wait for 5-10 minutes, CloudWatch usually takes around 5-10 minutes after the creation to fetch the details. check the result and more details here: https://bit.ly/3QV6sXi
+
+-To destroy the resources use the command: Terraform destroy-auto-approve
